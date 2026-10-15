@@ -1248,3 +1248,44 @@ main .news .wrap:not(.frame){padding-inline:calc(var(--px) + 32px)}
 }
 /* mobile: video thumbnails in portrait */
 @media (max-width:1024px){#videos .vcard .thumb{aspect-ratio:3/4}}
+/* focal points for the new category photos */
+.cat-hero .hero-img img[src*="hero-surfaces"]{object-position:50% 50%}
+.cat-hero .hero-img img[src*="hero-roofs"]{object-position:50% 55%}
+.cat-hero .hero-img img[src*="hero-wet"]{object-position:50% 40%}
+.cat-hero .hero-img img[src*="hero-joints"]{object-position:50% 25%}
+.cat .ph img[src*="cat-joints"]{object-position:50% 30%}
+@media (max-width:1024px){
+  .cat .ph img[src*="cat-surfaces"]{object-position:16% 50%}
+  .cat .ph img[src*="cat-roofs"]{object-position:45% 50%}
+  .cat .ph img[src*="cat-wet"]{object-position:50% 50%}
+  .cat .ph img[src*="cat-joints"]{object-position:45% 50%}
+}
+/* category photos: product centered, same zoom (crops computed per image) */
+.cat-hero .hero-img img[src*="hero-roofs"]{object-position:50% 50%}
+.cat .ph img[src*="cat-roofs"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-roofs"]{object-position:50% 50%}}
+.cat-hero .hero-img img[src*="hero-wet"]{object-position:50% 13%}
+.cat .ph img[src*="cat-wet"]{object-position:0% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-wet"]{object-position:0% 50%}}
+.cat-hero .hero-img img[src*="hero-joints"]{object-position:50% 0%}
+.cat .ph img[src*="cat-joints"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-joints"]{object-position:50% 50%}}
+.cat-hero .hero-img img[src*="hero-surfaces"]{object-position:50% 56%}
+.cat .ph img[src*="cat-surfaces"]{object-position:0% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-surfaces"]{object-position:0% 50%}}
+
+.cat-hero .hero-img img[src*="hero-"]{object-position:50% 50%!important}
+/* landing hero: the four category photos cross-fade */
+.land-photo .hero-photo img.sl{opacity:0;animation:heroFade 20s infinite;object-position:50% 50%}
+.land-photo .hero-photo img.sl:nth-of-type(1){animation-delay:0s}
+.land-photo .hero-photo img.sl:nth-of-type(2){animation-delay:5s}
+.land-photo .hero-photo img.sl:nth-of-type(3){animation-delay:10s}
+.land-photo .hero-photo img.sl:nth-of-type(4){animation-delay:15s}
+@media (max-width:1024px){
+.land-photo .hero-photo img[src*="land-roofs"]{object-position:32% 50%}
+.land-photo .hero-photo img[src*="land-wet"]{object-position:0% 50%}
+.land-photo .hero-photo img[src*="land-joints"]{object-position:48% 50%}
+.land-photo .hero-photo img[src*="land-surfaces"]{object-position:10% 50%}
+}
+.cat .ph img[src*="cat-joints"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-joints"]{object-position:46% 50%}}
