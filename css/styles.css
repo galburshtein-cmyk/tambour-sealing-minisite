@@ -1304,3 +1304,51 @@ main .news .wrap:not(.frame){padding-inline:calc(var(--px) + 32px)}
 @media (min-width:1025px){.cat .ph img[src*="cat-wet"]{object-position:20% 50%}}
 .cat .ph img[src*="cat-wet"]{object-position:50% 50%}
 @media (max-width:1024px){.cat .ph img[src*="cat-wet"]{object-position:30% 50%}}
+/* desktop landing photo: exactly 3 full rows */
+@media (min-width:1025px){
+  .land-photo .hero-photo::after{background:linear-gradient(to left,rgba(255,255,255,.55) 1px,transparent 1px) 0 0/var(--c) 100%,linear-gradient(to bottom,rgba(255,255,255,.55) 1px,transparent 1px) 0 0/100% 33.3334%}
+  .land-photo .hero-photo i{height:33.3334%}
+  .land-photo .hero-photo .fr{top:33.3334%}
+  .land-photo .hero-photo .fr2{top:66.6667%}
+}
+/* mobile video sits between the same two grid lines as the article rows */
+@media (max-width:1024px){
+  #videos .vcard{background:linear-gradient(var(--red-30),var(--red-30)) no-repeat 36px 0/1px 100%,linear-gradient(var(--red-30),var(--red-30)) no-repeat calc(100% - 36px) 0/1px 100%}
+  #videos .vcard .thumb{width:auto;margin-inline:37px 36px}
+  #videos .vcard .h4{padding:22px 56px 26px}
+  #videos .vcard .vdesc{padding:0 56px 26px}
+}
+/* desktop landing photo: square cells (7 columns x 3 rows) */
+@media (min-width:1025px){.land-photo .hero-photo{height:auto;aspect-ratio:7/3}}
+/* desktop landing photo: 7 columns x 2 rows of squares */
+@media (min-width:1025px){
+  .land-photo .hero-photo{aspect-ratio:7/2}
+  .land-photo .hero-photo::after{background:linear-gradient(to left,rgba(255,255,255,.55) 1px,transparent 1px) 0 0/var(--c) 100%,linear-gradient(to bottom,rgba(255,255,255,.55) 1px,transparent 1px) 0 0/100% 50%}
+  .land-photo .hero-photo i{height:50%}
+  .land-photo .hero-photo .fr{top:50%}
+  .land-photo .hero-photo .fr2{top:0}
+}
+/* blurred squares match the grid cells exactly */
+@media (min-width:1025px){.land-photo .hero-photo .fr,.land-photo .hero-photo .fr2{width:var(--c);height:50%}}
+@media (max-width:1024px){.land-photo .hero-photo .fr,.land-photo .hero-photo .fr2{width:var(--cell);height:var(--cell)}}
+/* blur squares sit on the right, away from each photo's main subject */
+@media (min-width:1025px){
+  .land-photo .hero-photo .fr{left:calc(var(--c) * 5);top:50%}
+  .land-photo .hero-photo .fr2{left:calc(var(--c) * 6);top:0}
+}
+@media (max-width:1024px){
+  .land-photo .hero-photo{--cell:33.3334%;height:auto;aspect-ratio:1/1}
+  .land-photo .hero-photo::after{background:linear-gradient(to left,rgba(255,255,255,.55) 1px,transparent 1px) 0 0/33.3334% 100%,linear-gradient(to bottom,rgba(255,255,255,.55) 1px,transparent 1px) 0 0/100% 33.3334%}
+  .land-photo .hero-photo .fr,.land-photo .hero-photo .fr2{width:33.3334%;height:33.3334%}
+  .land-photo .hero-photo .fr{left:66.6667%;top:66.6667%}
+  .land-photo .hero-photo .fr2{left:66.6667%;top:0}
+}
+/* one blur square on the left, one on the right */
+@media (min-width:1025px){.land-photo .hero-photo .fr{left:0;top:50%}}
+@media (max-width:1024px){.land-photo .hero-photo .fr{left:0;top:66.6667%}}
+/* landing slideshow: each image sits in its own <picture>, so the stagger is set per picture */
+.land-photo .hero-photo picture:nth-of-type(1) img.sl{animation-delay:0s}
+.land-photo .hero-photo picture:nth-of-type(2) img.sl{animation-delay:5s}
+.land-photo .hero-photo picture:nth-of-type(3) img.sl{animation-delay:10s}
+.land-photo .hero-photo picture:nth-of-type(4) img.sl{animation-delay:15s}
+@media (max-width:1024px){.land-photo .hero-photo img.sl{object-position:50% 50%}}
