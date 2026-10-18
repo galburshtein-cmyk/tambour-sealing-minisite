@@ -1289,3 +1289,18 @@ main .news .wrap:not(.frame){padding-inline:calc(var(--px) + 32px)}
 }
 .cat .ph img[src*="cat-joints"]{object-position:50% 50%}
 @media (max-width:1024px){.cat .ph img[src*="cat-joints"]{object-position:46% 50%}}
+/* category photos v3: product centered, same zoom */
+.cat .ph img[src*="cat-surfaces"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-surfaces"]{object-position:50% 50%}.land-photo .hero-photo img[src*="land-surfaces"]{object-position:20% 50%}}
+.cat .ph img[src*="cat-joints"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-joints"]{object-position:50% 50%}.land-photo .hero-photo img[src*="land-joints"]{object-position:58% 50%}}
+.cat .ph img[src*="cat-wet"]{object-position:0% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-wet"]{object-position:0% 50%}.land-photo .hero-photo img[src*="land-wet"]{object-position:0% 50%}}
+.cat .ph img[src*="cat-roofs"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-roofs"]{object-position:50% 50%}.land-photo .hero-photo img[src*="land-roofs"]{object-position:32% 50%}}
+@media (max-width:1024px){.land-photo .hero-photo img[src*="land-wet"]{object-position:8% 50%}}
+.cat .ph img[src*="cat-surfaces"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-surfaces"]{object-position:62% 50%}}
+@media (min-width:1025px){.cat .ph img[src*="cat-wet"]{object-position:20% 50%}}
+.cat .ph img[src*="cat-wet"]{object-position:50% 50%}
+@media (max-width:1024px){.cat .ph img[src*="cat-wet"]{object-position:30% 50%}}
